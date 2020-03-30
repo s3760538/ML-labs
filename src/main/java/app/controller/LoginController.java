@@ -1,12 +1,13 @@
 package app.controller;
 
+import java.util.Map;
+
 import app.controller.paths.Template;
 import app.controller.paths.Web;
 import app.controller.utils.RequestUtil;
 import app.controller.utils.ViewUtil;
 import io.javalin.http.Context;
 import io.javalin.http.Handler;
-import java.util.Map;
 
 
 public class LoginController {

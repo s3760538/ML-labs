@@ -18,7 +18,17 @@ public class Show {
 
     private List<CreditsRoll> creditsRolls;
 
-
+    public Show(int showid, String showTitle, double length, boolean isMovie, boolean isSeries,
+    		String genre, int year) 
+    {
+    	this.showid = showid;
+    	this.showTitle = showTitle;
+    	this.length = length;
+    	this.isMovie = isMovie;
+    	this.isSeries = isSeries;
+    	this.genre = genre;
+    	this.year = year;
+    }
 
 
 }

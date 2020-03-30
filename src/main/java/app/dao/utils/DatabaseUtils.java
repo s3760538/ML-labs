@@ -26,7 +26,7 @@ public class DatabaseUtils {
             // Prepare the information to connect (hard-coded)
             String url = "jdbc:mysql://localhost:3306/imbd";
             String user = "root";
-            String password = "root1";
+            String password = "POPPy675";
 
             // Connect through the Driver
             connection = DriverManager.getConnection(url, user, password);

@@ -1,8 +1,9 @@
 package app.controller;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import app.dao.AccountDAO;
 import app.model.Account;
-import org.mindrot.jbcrypt.BCrypt;
 
 
 
