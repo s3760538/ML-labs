@@ -1,8 +1,4 @@
 #parse("/velocity/layout.vm")
 #@mainLayout()
-<form id="searchActorForm" method="post">
-    <label>Search by Actor</label>
-    <input type="text" name="showActorSearch" placeholder="ActorName" value="" required>
-    <input type="submit" value="Search">
-</form>
+<h1> ${UserInformation} </h2>
 #end

@@ -19,14 +19,14 @@ public class DatabaseUtils {
 
 
     public static Connection connectToDatabase() throws Exception {
-        // creates a Connection objecti
+        // creates a Connection object
         Connection connection = null;
 
         try {
             // Prepare the information to connect (hard-coded)
-            String url = "jdbc:mysql://localhost:3306/imbd";
+            String url = "jdbc:mysql://localhost:3306/imbd?serverTimezone=Australia/Sydney";
             String user = "root";
-            String password = "POPPy675";
+            String password = "!!!CHANGE THIS PASSWORD TO YOUR OWN!!!";
 
             // Connect through the Driver
             connection = DriverManager.getConnection(url, user, password);

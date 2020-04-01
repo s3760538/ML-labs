@@ -13,7 +13,7 @@ import app.model.Account;
 
 public class AccountDAO {
     public static final String SALT = "$2a$10$h.dl5J86rGH7I8bD9bZeZe";
-
+    public static List<Account> accountList = new ArrayList<>();
 
     /**
      * Method to fetch users from the database.
@@ -31,7 +31,8 @@ public class AccountDAO {
 
         try {
             // Here you prepare your sql statement
-            String sql = "SELECT username, password FROM account WHERE username ='" + username + "'";
+            String sql = "SELECT * "
+            		+ "FROM account WHERE username ='" + username + "'";
 
             // Execute the query
             Connection connection = DatabaseUtils.connectToDatabase();
@@ -43,11 +44,19 @@ public class AccountDAO {
                 // 2) Add it to the list we have prepared
                 accounts.add(
                   // 1) Create a new account object
-                  new Account(result.getString("username"),
-                          result.getString("password"))
+                  new Account(
+                  result.getString("username"),
+                  result.getString("password"),
+                  result.getString("email"),
+                  result.getString("country"),
+                  result.getString("gender"),
+                  result.getString("first_name"),
+                  result.getString("last_name")
+                  )
                 );
             }
-
+            System.out.println(accounts.get(0).toString());
+            accountList.add(accounts.get(0));
             // Close it
             DatabaseUtils.closeConnection(connection);
         }
@@ -55,13 +64,13 @@ public class AccountDAO {
             e.printStackTrace();
         }
 
-
         // If there is a result
         if(!accounts.isEmpty()) return accounts.get(0);
         // If we are here, something bad happened
         return null;
     }
-
-
-
+    
+    public static Account accessAcount(int index) {
+    	return accountList.get(index);
+    }
 }

@@ -38,7 +38,7 @@ public class Main {
             post(Web.LOGOUT, LoginController.handleLogoutPost);
 
             get(Web.ACCOUNT, AccountController.serveAccountPage);
-
+            
             // Add new actions here
             // Seeing pages (get) and sending information in forms (post)
         });

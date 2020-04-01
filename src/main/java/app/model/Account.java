@@ -25,15 +25,30 @@ public class Account {
     }
 
 
-    public Account(String fn, String ln, String a, String c, String g, String email) {
-        // TODO fill in here
-        /* You should use this constructor when you are showing the account page,
-        hence, the user is already logged in. Therefore, the username Should be used
-        to fetch this information from the database. You may have to tweek some stuff
-        here and there.
-        You should NEVER show the current password in the form. NEVER!
-        And if you want to change the password, you need to ask for current password as well.
-         */
+    public Account(String username, String password, String email, 
+    		String country, String gender, String firstName, String lastName) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+        this.country = country;
+        this.gender = gender;
+        this.firstName = firstName;
+        this.lastName = lastName;
+    	
+    }
+    
+    @Override
+    public String toString() {
+    	return String.format(
+    	"Username: %s\n" +
+    	"Password: %s\n" +
+    	"Email: %s\n" +
+    	"Country: %s\n" +
+    	"Gender: %s\n" +
+    	"FirstName: %s\n" +
+    	"LastName: %s\n", 
+    	this.username, this.password, this.email,
+    	this.country, this.gender, this.firstName, this.lastName);
     }
 
 

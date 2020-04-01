@@ -15,7 +15,6 @@ public class IndexController {
     public static Handler serveIndexPage = ctx -> {
         Map<String, Object> model = ViewUtil.baseModel(ctx);
         ctx.render(Template.INDEX, model);
-        System.out.println("Index page being used");
     };
 
 
