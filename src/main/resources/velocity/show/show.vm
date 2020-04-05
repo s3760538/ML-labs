@@ -1,4 +1,5 @@
 #parse("/velocity/layout.vm")
 #@mainLayout()
-<h1> ${ShowInformation} </h2>
+<h1> ${ShowName} | ${ShowType} </h1>
+<p> ${ShowInformation} </p>
 #end

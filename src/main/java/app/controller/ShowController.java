@@ -12,10 +12,10 @@ public class ShowController
 	public static Handler serveShowPage = ctx -> {
         Map<String, Object> model = ViewUtil.baseModel(ctx);
         
-        //model.put(ShowDAO.accessShow(0).toString());
+        model.put("ShowName", ShowDAO.getSelectedShow().getShowTitle().toString());
+        model.put("ShowType", ShowDAO.getSelectedShow().getType().toString());
+        model.put("ShowInformation", ShowDAO.getSelectedShow().getAllInfo().toString());
         
-        model.put("ShowInformation", ShowDAO.accessShow(0).toString());
         ctx.render(Template.SHOW, model);
 	};
-
 }

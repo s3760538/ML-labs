@@ -12,16 +12,15 @@ import app.model.Show;
 public class ShowDAO
 {
     public static List<Show> showList = new ArrayList<>();
-
+    public static Show selectedShow;
     
-    public static Show getShowByShowName(String showName) { 
+    public static boolean createShow(String showName) { 
     	 // Fish out the results
         List<Show> shows = new ArrayList<>();
         
         try {
             // Here you prepare your sql statement
-            String sql = "SELECT * "
-            		+ "FROM show WHERE show_title ='" + showName + "'";
+            String sql = "SELECT * FROM imbd.show WHERE show_title = '" + showName + "'";
 
             // Execute the query
             Connection connection = DatabaseUtils.connectToDatabase();
@@ -36,31 +35,29 @@ public class ShowDAO
                   new Show(
                   result.getInt("showid"),
                   result.getString("show_title"),
+                  result.getString("genre"),
                   result.getDouble("length"),
                   result.getBoolean("movie"), 
                   result.getBoolean("series"),
-                  result.getString("genre"), 
+                  result.getInt("proco_id"), 
                   result.getInt("year")
                   )
                 );
             }
-            System.out.println(shows.get(0).toString());
-            showList.add(shows.get(0));
             // Close it
             DatabaseUtils.closeConnection(connection);
         }
         catch (Exception e) {
             e.printStackTrace();
         }
-    	
-    	// If there is a result
-        if(!shows.isEmpty()) return shows.get(0);
-        // If we are here, something bad happened
-        return null;
+        
+        selectedShow = shows.size() != 0 ? shows.get(0) : null;
+        
+    	return shows.size() != 0;
     }
     
-    public static Show accessShow(int index) {
-    	return showList.get(index);
+    public static Show getSelectedShow() {
+    	return selectedShow;
     }
     
 }

@@ -39,6 +39,7 @@ public class PersonDAO {
     	{
             e.printStackTrace();
         } 
+    	
     	selectedPerson = tempPersonList.size() != 0 ? tempPersonList.get(0) : null;
     	
     	return tempPersonList.size() != 0;
