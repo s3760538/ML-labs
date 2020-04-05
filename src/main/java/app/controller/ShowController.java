@@ -15,6 +15,7 @@ public class ShowController
         model.put("ShowName", ShowDAO.getSelectedShow().getShowTitle().toString());
         model.put("ShowType", ShowDAO.getSelectedShow().getType().toString());
         model.put("ShowInformation", ShowDAO.getSelectedShow().getAllInfo().toString());
+        model.put("ShowPhoto", ShowDAO.getSelectedShow().getPhoto().toString());
         
         ctx.render(Template.SHOW, model);
 	};

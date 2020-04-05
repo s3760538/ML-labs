@@ -13,6 +13,7 @@ public class Show {
     private String genre;
     private int proco_id;
     private int year;
+    private Image photo;
 
     private List<UserReview> userReviewList;
     private ProductionCompany productionCompany;
@@ -30,6 +31,7 @@ public class Show {
     	this.isSeries = isSeries;
     	this.proco_id = proco_id;
     	this.year = year;
+    	photo = new Image(showid, false);
     }
 
     @Override
@@ -85,6 +87,10 @@ public class Show {
 
     public int getYear() {
     	return this.year;
+    }
+    
+    public Image getPhoto() {
+    	return photo;
     }
     
     public String getAllInfo() {

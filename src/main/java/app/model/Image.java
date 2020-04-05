@@ -10,7 +10,7 @@ public class Image {
 
 
     Image(int id, boolean person) {
-        folder = (person) ? "/img/people/" : "/img/shows";
+        folder = (person) ? "/img/people/" : "/img/shows/";
         name = id + ".jpg";
     }
 
