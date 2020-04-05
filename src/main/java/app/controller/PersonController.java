@@ -18,6 +18,7 @@ public class PersonController {
         model.put("ActorName", PersonDAO.getSelectedPerson().getFullName().toString());
         model.put("ActorBIO", PersonDAO.getSelectedPerson().getBio().toString());
         model.put("ActorRole", PersonDAO.getSelectedPerson().getRole().toString());
+        model.put("ActorPicture", PersonDAO.getSelectedPerson().getPhoto().toString());
         model.put("ActorDOB", formatDOB(PersonDAO.getSelectedPerson().getBirthdate().toString()));
         
         ctx.render(Template.PERSON, model);

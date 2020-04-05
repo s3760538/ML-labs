@@ -12,6 +12,7 @@ public class Person {
     private String role;
     private String bio;
     private Date birthdate;
+    private Image photo;
 
 
 
@@ -22,6 +23,7 @@ public class Person {
         this.role = role;
         this.birthdate = birthDate;
         this.bio = bio;
+        this.photo = new Image(personId, true);
     }
 
 
@@ -46,4 +48,7 @@ public class Person {
         return bio;
     }
 
+    public Image getPhoto() {
+    	return photo;
+    }
 }
