@@ -56,7 +56,6 @@ public class AccountDAO {
                   )
                 );
             }
-            System.out.println(accounts.get(0).toString());
             accountList.add(accounts.get(0));
             // Close it
             DatabaseUtils.closeConnection(connection);
