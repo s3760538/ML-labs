@@ -13,10 +13,8 @@ public class Web {
     public static final String LOGIN = "/login";
     public static final String LOGOUT = "/logout";
     public static final String ACCOUNT = "/account";
-<<<<<<< HEAD
     public static final String PERSON = "/person";
-=======
     public static final String ACTORPAGE = "/actorpage";
     public static final String SHOW = "/show";
->>>>>>> 351c1ab14f945768af9e944b3fa208898e3d0b19
+
 }
