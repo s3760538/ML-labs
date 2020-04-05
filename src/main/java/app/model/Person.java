@@ -16,11 +16,12 @@ public class Person {
 
 
 
-    public Person(int id, String fn, String r, Date bd, String b) {
-        personId = id;
-        fullName = fn;
-        role = r;
-        birthdate = bd;
+    public Person(int personId, String fullName, String role, Date birthDate, String bio) {
+        this.personId = personId;
+        this.fullName = fullName;
+        this.role = role;
+        this.birthdate = birthdate;
+        this.bio = bio;
     }
 
 
@@ -44,4 +45,5 @@ public class Person {
     public String getBio() {
         return bio;
     }
+
 }

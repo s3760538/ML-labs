@@ -1,0 +1,5 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<h1> ${ActorName} | ${ActorRole} </h1>
+<p> ${ActorBIO} </p>
+#end

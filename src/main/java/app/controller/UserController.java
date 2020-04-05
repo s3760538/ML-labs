@@ -5,10 +5,6 @@ import org.mindrot.jbcrypt.BCrypt;
 import app.dao.AccountDAO;
 import app.model.Account;
 
-
-
-
-
 public class UserController {
 
 
@@ -32,16 +28,11 @@ public class UserController {
         return hashedPassword.equals(user.getPassword());
     }
 
-
-
-
     public static void setPassword(String username, String oldPassword, String newPassword) {
         if (authenticate(username, oldPassword)) {
             String newSalt = BCrypt.gensalt();
             String newHashedPassword = BCrypt.hashpw(newSalt, newPassword);
-
             // Update the user salt and password
         }
     }
-
 }

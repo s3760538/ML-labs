@@ -14,6 +14,7 @@ import app.model.Account;
 public class AccountDAO {
     public static final String SALT = "$2a$10$h.dl5J86rGH7I8bD9bZeZe";
     public static List<Account> accountList = new ArrayList<>();
+   
 
     /**
      * Method to fetch users from the database.
