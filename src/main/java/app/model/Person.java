@@ -20,7 +20,7 @@ public class Person {
         this.personId = personId;
         this.fullName = fullName;
         this.role = role;
-        this.birthdate = birthdate;
+        this.birthdate = birthDate;
         this.bio = bio;
     }
 

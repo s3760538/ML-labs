@@ -2,4 +2,5 @@
 #@mainLayout()
 <h1> ${ActorName} | ${ActorRole} </h1>
 <p> ${ActorBIO} </p>
+<p><strong> Born:</strong> ${ActorDOB}</p>
 #end

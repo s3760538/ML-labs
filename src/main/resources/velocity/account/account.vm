@@ -1,4 +1,8 @@
 #parse("/velocity/layout.vm")
 #@mainLayout()
+<<<<<<< HEAD
 <h1> ${UserInformation} </h1>
+=======
+<pre>${UserInformation} </pre>
+>>>>>>> branch 'master' of https://github.com/isys1118-sef2020/team-project-mk-thebabamebaskets-1.git
 #end
