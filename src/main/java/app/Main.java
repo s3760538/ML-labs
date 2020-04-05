@@ -30,18 +30,18 @@ public class Main {
             // before(LoginController.ensureLoginBeforeViewing);
 
             get(Web.INDEX, IndexController.serveIndexPage);
-            post(Web.INDEX, IndexController.handleActorSearchPost);
+            post(Web.INDEX, IndexController.handleSearchPost);
            
             get(Web.LOGIN, LoginController.serveLoginPage);
             post(Web.LOGIN, LoginController.handleLoginPost);
             post(Web.LOGOUT, LoginController.handleLogoutPost);
 
             get(Web.ACCOUNT, AccountController.serveAccountPage);
-            get(Web.PERSON, PersonController.servePersonPage);
             
             // Add new actions here
             // Seeing pages (get) and sending information in forms (post)
             get(Web.SHOW, ShowController.serveShowPage);
+            get(Web.PERSON, PersonController.servePersonPage);
         });
 
         app.error(404, ViewUtil.notFound);

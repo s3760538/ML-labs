@@ -1,4 +1,4 @@
 #parse("/velocity/layout.vm")
 #@mainLayout()
-<h1> ${UserInformation} </h2>
+<h1> ${UserInformation} </h1>
 #end
