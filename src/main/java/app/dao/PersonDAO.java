@@ -20,6 +20,7 @@ public class PersonDAO {
     	List<Person> tempPersonList = new ArrayList<>();
     	try 
     	{
+    		personname = checkForSingleQuote(personname);
     		String sql = "SELECT * FROM person WHERE fullname = '" + personname + "'";
     		
     		Connection connection = DatabaseUtils.connectToDatabase();
@@ -45,5 +46,17 @@ public class PersonDAO {
     
     public static Person getSelectedPerson() {
     	return selectedPerson;
+    }
+    
+    //checks if the name has the single quote and changes string to be readable
+    private static String checkForSingleQuote(String name) {
+    	for(int i = 0; i < name.length(); i++) {
+    		if(name.charAt(i) == '\'') {
+    			String temp = name.substring(0, i) + "\\" + name.substring(i);
+    			name = temp;
+    			i++;
+    		}
+    	}
+    	return name;
     }
 }
