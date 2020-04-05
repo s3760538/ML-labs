@@ -6,7 +6,11 @@ import static io.javalin.apibuilder.ApiBuilder.post;
 import app.controller.AccountController;
 import app.controller.IndexController;
 import app.controller.LoginController;
+<<<<<<< HEAD
 import app.controller.PersonController;
+=======
+import app.controller.ShowController;
+>>>>>>> 351c1ab14f945768af9e944b3fa208898e3d0b19
 import app.controller.paths.Web;
 import app.controller.utils.ViewUtil;
 import io.javalin.Javalin;
@@ -44,6 +48,7 @@ public class Main {
             
             // Add new actions here
             // Seeing pages (get) and sending information in forms (post)
+            get(Web.SHOW, ShowController.serveShowPage);
         });
 
         app.error(404, ViewUtil.notFound);

@@ -5,3 +5,5 @@
 #* @vtlvariable name="authenticationFailed" type="java.lang.String" *#
 #* @vtlvariable name="authenticationSucceeded" type="java.lang.String" *#
 #* @vtlvariable name="loginRedirect" type="java.lang.String" *#
+
+#* @vtlvariable name="searchShow" type="java.lang.String" *#
