@@ -24,7 +24,7 @@ public class PersonController {
     
     //converts date of birth into a more readable format
     private static String formatDOB(String dob) {
-    	String month = new DateFormatSymbols().getMonths()[Integer.parseInt( dob.substring(5, 7))];
+    	String month = new DateFormatSymbols().getMonths()[Integer.parseInt( dob.substring(5, 7)) - 1];
     	
     	String formated = month + " " + dob.substring(8) + ", " + dob.substring(0, 4);
 		return formated;
