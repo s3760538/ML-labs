@@ -1,7 +1,0 @@
-#parse("/velocity/layout.vm")
-#@mainLayout()
-<h1> ${ActorName} | ${ActorRole} </h1>
-<center><img src = ${ActorPhoto} alt = ${ActorName} height = 50%/></center>
-<p> ${ActorBIO} </p>
-<p><strong> Born:</strong> ${ActorDOB}</p>
-#end

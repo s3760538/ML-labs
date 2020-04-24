@@ -1,6 +1,0 @@
-#parse("/velocity/layout.vm")
-#@mainLayout()
-<h1> ${ShowName} | ${ShowType} </h1>
-<center><img src = ${ShowPhoto} alt = ${ShowName} height = 50%/></center>
-<p> ${ShowInformation} </p>
-#end
